@@ -52,46 +52,50 @@
        div.w1 {
         position: absolute;
            right: 0px;
-           left: 950px;
-           top: 450px;
+           left: 1000px;
+           top: 350px;
        }
        div.w2 {
         position: absolute;
            right: 0px;
-           left: 950px;
-           top: 900px;
+           left: 1000px;
+           top: 770px;
        }
        div.w3 {
         position: absolute;
            right: 0px;
-           left: 950px;
-           top: 1300px;
+           left: 1000px;
+           top: 1190px;
        }
        div.w4 {
         position: absolute;
            right: 0px;
-           left: 950px;
-           top: 1700px;
+           left: 1000px;
+           top: 1610px;
        }
        p {
            color: red;
            font-size: 20px;
            line-height: 10px;
-
        }
        div.da {
            background-color: aqua;
        }
-       
+       div.icon {        
+           position: fixed;
+           bottom: 120px;
+           right: 0px;
+       }
     </style>
 </head>
 <body>
-    <div class="al">hello
+    <div class="al">
 
     </div>
     <div > 
     <img class="ai1" src="aicap1.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao" >
         <div class="da"><br>
+            <p id="sch10" ><br></p>
             <p id="sch1"><br></p>
             <p id="sch11"><br></p>  
             <p id="sch12"><br></p> 
@@ -105,6 +109,7 @@
     <div>
     <img class="ai2" src="aicap2.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao1" >
         <div class="da"><br>
+            <p id="sch20" ><br></p>
             <p id="sch2"><br></p>
             <p id="sch21"><br></p>  
             <p id="sch22"><br></p> 
@@ -115,20 +120,42 @@
     <div class="w2"><button id = "2" >Thêm vào giỏ</button></div></br>
     </div>
    <div>
-    <img class="ai3" src="aicap3.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao2" id="sch3"> dsds</div>
+    <img class="ai3" src="aicap3.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao2" >
+        <div class="da"><br>
+            <p id="sch30" ><br></p>
+            <p id="sch3"><br></p>
+            <p id="sch31"><br></p>  
+            <p id="sch32"><br></p> 
+            <p id="sch33"><br></p>
+            <p id="sch34"><br></p> 
+            <p id="sch35"><br></p>
+           </div></div>
     <div class="w3"><button id = "3" >Thêm vào giỏ</button></div></br>
 </div>
 <div>
-    <img class="ai4" src="aicap4.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao3" id="sch4"> dsds</div>
+    <img class="ai4" src="aicap4.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao3" >
+        <div class="da"><br>
+            <p id="sch40" ><br></p>
+            <p id="sch4"><br></p>
+            <p id="sch41"><br></p>  
+            <p id="sch42"><br></p> 
+            <p id="sch43"><br></p>
+            <p id="sch44"><br></p> 
+            <p id="sch45"><br></p>
+           </div></div>
     <div class="w4"><button id = "4" >Thêm vào giỏ</button></div></br>
 </div>
     <div class="giohang">
         <a href="giohang.html"><img src="giohang.png" alt=" " width="150px"></a>
     </div>
+    <div class="icon">
+        <a href="game.html"><img src="ico2ngame.png" alt="" width="150px"  ></a>
+    </div>
 </body>
 <script>
     class Meo {
-        constructor (age,gender,weight,generic,price,description){
+        constructor (id,age,gender,weight,generic,price,description){
+            this.id = id;
             this.age = age;
             this.gender = gender;
             this.weight = weight;
@@ -144,7 +171,7 @@
         return('Giới Tính: ' + this.gender);
     }
     wweight() {
-        return ('Cân nặng: ' +this.weight);
+        return ('Cân nặng: ' +this.weight+ ' kg');
     }
     pprice() {
         return ('Giá: ' + this.price);
@@ -155,10 +182,14 @@
     ddescription() {
         return('Mô tả: ' +this.description);
     }
+    iid() {
+        return ('Id: '+ this.id);
+    }
     
     };
     
-    let aicap01= new Meo(5,'cái',5.3,'lp','5.300.000vnđ'," f");
+    let aicap01= new Meo('AC001',5,'cái',3.8,'lp','5.300.000vnđ'," f");
+    document.getElementById('sch10').innerText = aicap01.iid();
     document.getElementById('sch1').innerText = aicap01.aage();
     document.getElementById('sch11').innerText = aicap01.ggender();
     document.getElementById('sch12').innerText = aicap01.wweight();
@@ -166,14 +197,39 @@
     document.getElementById('sch14').innerText = aicap01.ggeneric();
     document.getElementById('sch15').innerText = aicap01.ddescription();
     
-    let aicap02= new Meo(7,'đực',3,'lp','6.000.000vnđ'," f");
+    let aicap02= new Meo('AC002',7,'đực',3,'lp','6.000.000vnđ'," f");
+    document.getElementById('sch20').innerText = aicap02.iid();
     document.getElementById('sch2').innerText = aicap02.aage();
     document.getElementById('sch21').innerText = aicap02.ggender();
     document.getElementById('sch22').innerText = aicap02.wweight();
     document.getElementById('sch23').innerText = aicap02.pprice();
     document.getElementById('sch24').innerText = aicap02.ggeneric();
     document.getElementById('sch25').innerText = aicap02.ddescription();
+
+    let aicap03= new Meo('AC003',6.5,'cái',4,'lp','7.000.000vnđ'," f");
+    document.getElementById('sch30').innerText = aicap03.iid();
+    document.getElementById('sch3').innerText = aicap03.aage();
+    document.getElementById('sch31').innerText = aicap03.ggender();
+    document.getElementById('sch32').innerText = aicap03.wweight();
+    document.getElementById('sch33').innerText = aicap03.pprice();
+    document.getElementById('sch34').innerText = aicap03.ggeneric();
+    document.getElementById('sch35').innerText = aicap03.ddescription();
     
+
+    let aicap04= new Meo('AC004',11,'đực',4.5,'lp','5.500.000vnđ'," f");
+    document.getElementById('sch40').innerText = aicap04.iid();
+    document.getElementById('sch4').innerText = aicap04.aage();
+    document.getElementById('sch41').innerText = aicap04.ggender();
+    document.getElementById('sch42').innerText = aicap04.wweight();
+    document.getElementById('sch43').innerText = aicap04.pprice();
+    document.getElementById('sch44').innerText = aicap04.ggeneric();
+    document.getElementById('sch45').innerText = aicap04.ddescription();
+    
+    setTimeout(function icongame() {
+        
+    }, 3000);
+
+        
     
         </script>
 </html>
