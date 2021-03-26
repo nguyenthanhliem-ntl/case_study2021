@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class Meo {
+    constructor (age,gender,weight,generic,price,description){
+        this.age = age;
+        this.gender = gender;
+        this.weight = weight;
+        this.price = price;
+        this.description = description;
+        this.generic = generic;
+    
+    }
+aage(){
+    return ( this.age +" tháng tuổi");
+}
+ggender() {
+    return ('Giới Tính: ' + this.gender);
+}
+wweight() {
+    return ('Cân nặng: ' +this.weight);
+}
+pprice() {
+    return ('Giá: ' + this.price);
+}
+ggeneric () {
+    return ('Thuộc: ' +this.generic);
+}
+ddescription() {
+    return('Mô tả: ' +this.description);
+}
+
+};
+function sch1() {
+let ap = new Meo(5,'cái',5.3,'lp','5tr3'," f");
+document.write(ap.ggender()+'</br>')
+document.write(ap.aage()+'</br>')
+document.write(ap.wweight()+'</br>')
+document.write(ap.pprice()+'</br>')
+document.write(ap.ggeneric()+'</br>')
+document.write(ap.ddescription()+'</br>')
+}
+document.getElementById('sch1').innerText = sch1()
+    </script>
+    
+</body>
+</html>

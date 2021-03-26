@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .ai1, .ai2, .ai3, .ai4 {
+           margin-left: 350px;
+           margin-top: 20px;
+       }
+       div.ao {
+           position: absolute;
+           right: 0px;
+           left: 800px;
+           top: 100px;
+           
+       }
+       div.ao1 {
+        position: absolute;
+           right: 0px;
+           left: 800px;
+           top: 520px;
+       }
+       div.ao2 {
+        position: absolute;
+           right: 0px;
+           left: 800px;
+           top: 940px;
+
+       }
+       div.ao3 {
+        position: absolute;
+           right: 0px;
+           left: 800px;
+           top: 1360px;
+
+       }
+       /* div.al {
+            position: sticky;
+            top:0;
+            background-color: chartreuse;
+            padding: 30px;
+            font-size: 20px;
+       } */
+       div.giohang {
+           position: fixed;
+           bottom: 30px;
+           right: 0px;
+       }
+       div.w1 {
+        position: absolute;
+           right: 0px;
+           left: 950px;
+           top: 450px;
+       }
+       div.w2 {
+        position: absolute;
+           right: 0px;
+           left: 950px;
+           top: 900px;
+       }
+       div.w3 {
+        position: absolute;
+           right: 0px;
+           left: 950px;
+           top: 1300px;
+       }
+       div.w4 {
+        position: absolute;
+           right: 0px;
+           left: 950px;
+           top: 1700px;
+       }
+       p {
+           color: red;
+           font-size: 20px;
+           line-height: 10px;
+
+       }
+       div.da {
+           background-color: aqua;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="al">hello
+
+    </div>
+    <div > 
+    <img class="ai1" src="aicap1.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao" >
+        <div class="da"><br>
+            <p id="sch1"><br></p>
+            <p id="sch11"><br></p>  
+            <p id="sch12"><br></p> 
+            <p id="sch13"><br></p>
+            <p id="sch14"><br></p> 
+            <p id="sch15"><br></p>
+           </div></div>
+    <div class="w1"><button id = "1" >Thêm vào giỏ</button></div></br>
+    </div>  
+    
+    <div>
+    <img class="ai2" src="aicap2.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao1" >
+        <div class="da"><br>
+            <p id="sch2"><br></p>
+            <p id="sch21"><br></p>  
+            <p id="sch22"><br></p> 
+            <p id="sch23"><br></p>
+            <p id="sch24"><br></p> 
+            <p id="sch25"><br></p>
+           </div></div>
+    <div class="w2"><button id = "2" >Thêm vào giỏ</button></div></br>
+    </div>
+   <div>
+    <img class="ai3" src="aicap3.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao2" id="sch3"> dsds</div>
+    <div class="w3"><button id = "3" >Thêm vào giỏ</button></div></br>
+</div>
+<div>
+    <img class="ai4" src="aicap4.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao3" id="sch4"> dsds</div>
+    <div class="w4"><button id = "4" >Thêm vào giỏ</button></div></br>
+</div>
+    <div class="giohang">
+        <a href="giohang.html"><img src="giohang.png" alt=" " width="150px"></a>
+    </div>
+</body>
+<script>
+    class Meo {
+        constructor (age,gender,weight,generic,price,description){
+            this.age = age;
+            this.gender = gender;
+            this.weight = weight;
+            this.price = price;
+            this.description = description;
+            this.generic = generic;
+        
+        }
+    aage(){
+        return( this.age +" tháng tuổi");
+    }
+    ggender() {
+        return('Giới Tính: ' + this.gender);
+    }
+    wweight() {
+        return ('Cân nặng: ' +this.weight);
+    }
+    pprice() {
+        return ('Giá: ' + this.price);
+    }
+    ggeneric () {
+        return ('Thuộc: ' +this.generic);
+    }
+    ddescription() {
+        return('Mô tả: ' +this.description);
+    }
+    
+    };
+    
+    let aicap01= new Meo(5,'cái',5.3,'lp','5.300.000vnđ'," f");
+    document.getElementById('sch1').innerText = aicap01.aage();
+    document.getElementById('sch11').innerText = aicap01.ggender();
+    document.getElementById('sch12').innerText = aicap01.wweight();
+    document.getElementById('sch13').innerText = aicap01.pprice();
+    document.getElementById('sch14').innerText = aicap01.ggeneric();
+    document.getElementById('sch15').innerText = aicap01.ddescription();
+    
+    let aicap02= new Meo(7,'đực',3,'lp','6.000.000vnđ'," f");
+    document.getElementById('sch2').innerText = aicap02.aage();
+    document.getElementById('sch21').innerText = aicap02.ggender();
+    document.getElementById('sch22').innerText = aicap02.wweight();
+    document.getElementById('sch23').innerText = aicap02.pprice();
+    document.getElementById('sch24').innerText = aicap02.ggeneric();
+    document.getElementById('sch25').innerText = aicap02.ddescription();
+    
+    
+        </script>
+</html>
