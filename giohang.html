@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <table id="mapet">
+        <tr>
+            <th scope="col">Mã Pet</th>
+            <th scope="col">Giá</th>
+            <th scope="col">Khuyến mãi</th>
+            <th scope="col">Tổng</th>
+            
+        </tr>
+        <tbody id="list">
+        <tr>
+            <td>Day C02 bai "Ham 2"</td>
+        </tr>
+        <tr>
+            <td>Day C02 bai "Ham 2"</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    myStorage = window.localStorage;   
+    let cap1 = JSON.parse(localStorage.getItem("aicap01"));
+        let a = cap1.id ;
+        document.write(cap1.price +'<br>')
+    let cap2 = JSON.parse(localStorage.getItem("aicap02"));
+        document.write(cap2.id );
+        document.write(cap2.price +"<br>")
+    // let cap3 = JSON.parse(localStorage.getItem("aicap03"));
+    //     document.write(cap3.id );
+    //     document.write(cap3.price +'<br>')
+    // let cap4 = JSON.parse(localStorage.getItem("aicap04"));
+    //     document.write(cap4.id );
+    //     document.write(cap4.price +'<br>')
+    // console.log(a.id);
+    // localStorage.setItem('cat', 'JSON.stringify(aicap01)');
+    let list = [];
+function showAll(){
+    let content="";
+    for (let i = 0; i < list.length; i++) {      
+        content += "<tr><th>"+list[i]+"</th></tr>";
+    }
+    document.getElementById("list").innerHTML = content;
+}list.push(a)
+function them() {
+    list.push(a)
+return list;
+}
+document.write(list)
+</script>
+</html>

@@ -86,6 +86,10 @@
            bottom: 120px;
            right: 0px;
        }
+       button {
+           background-color: rgb(240, 153, 22);
+            
+       }
     </style>
 </head>
 <body>
@@ -103,7 +107,7 @@
             <p id="sch14"><br></p> 
             <p id="sch15"><br></p>
            </div></div>
-    <div class="w1"><button id = "1" >Thêm vào giỏ</button></div></br>
+    <div class="w1"><button onclick="them()" id = "1" >Thêm vào giỏ</button></div></br>
     </div>  
     
     <div>
@@ -117,7 +121,7 @@
             <p id="sch24"><br></p> 
             <p id="sch25"><br></p>
            </div></div>
-    <div class="w2"><button id = "2" >Thêm vào giỏ</button></div></br>
+    <div class="w2"><button onclick="them()" id = "2" >Thêm vào giỏ</button></div></br>
     </div>
    <div>
     <img class="ai3" src="aicap3.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao2" >
@@ -130,7 +134,7 @@
             <p id="sch34"><br></p> 
             <p id="sch35"><br></p>
            </div></div>
-    <div class="w3"><button id = "3" >Thêm vào giỏ</button></div></br>
+    <div class="w3"><button onclick="them()" id = "3" >Thêm vào giỏ</button></div></br>
 </div>
 <div>
     <img class="ai4" src="aicap4.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao3" >
@@ -143,7 +147,7 @@
             <p id="sch44"><br></p> 
             <p id="sch45"><br></p>
            </div></div>
-    <div class="w4"><button id = "4" >Thêm vào giỏ</button></div></br>
+    <div class="w4"><button onclick="them()" id = "4" >Thêm vào giỏ</button></div></br>
 </div>
     <div class="giohang">
         <a href="giohang.html"><img src="giohang.png" alt=" " width="150px"></a>
@@ -224,12 +228,16 @@
     document.getElementById('sch43').innerText = aicap04.pprice();
     document.getElementById('sch44').innerText = aicap04.ggeneric();
     document.getElementById('sch45').innerText = aicap04.ddescription();
-    
-    setTimeout(function icongame() {
-        
-    }, 3000);
 
-        
-    
+    function them() {
+        ;
+    }
+    myStorage = window.localStorage;
+localStorage.setItem('aicap01', JSON.stringify(aicap01));
+localStorage.setItem('aicap02', JSON.stringify(aicap02));
+localStorage.setItem('aicap03', JSON.stringify(aicap03));
+localStorage.setItem('aicap04', JSON.stringify(aicap04));
+
+
         </script>
 </html>

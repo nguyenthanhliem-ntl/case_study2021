@@ -5,8 +5,233 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .p {
+            color: brown;
+            background-color: chartreuse;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 250px;
+        }
+        .s {
+            margin-left: 350px;            
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .al1 {
+            margin-left: 500px;
+        }
+        .aq {
+            margin-left:  1250px;
+            width: 100px;
+            height: 50px;
+            background-color: darkorange;
+        }
+    </style>
 </head>
 <body>
+    <p class="p" id="cauhoi1"></p>
+    <p class="s" id="a"></p>
+    <p class="s" id="b"></p>
+    <p class="s" id="c"></p>
+    <p class="s" id="d"></p>
+    <input class="al1" id="cautraloi1" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi2"></p>
+    <p class="s" id="a1"></p>
+    <p class="s" id="b1"></p>
+    <p class="s" id="c1"></p>
+    <p class="s" id="d1"></p>
+    <input class="al1" id="cautraloi2" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi3"></p>
+    <p class="s" id="a2"></p>
+    <p class="s" id="b2"></p>
+    <p class="s" id="c2"></p>
+    <p class="s" id="d2"></p>
+    <input class="al1" id="cautraloi3" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi4"></p>
+    <p class="s" id="a3"></p>
+    <p class="s" id="b3"></p>
+    <p class="s" id="c3"></p>
+    <p class="s" id="d3"></p>
+    <input class="al1" id="cautraloi4" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi5"></p>
+    <p class="s" id="a4"></p>
+    <p class="s" id="b4"></p>
+    <p class="s" id="c4"></p>
+    <p class="s" id="d4"></p>
+    <input class="al1" id="cautraloi5" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi6"></p>
+    <p class="s" id="a5"></p>
+    <p class="s" id="b5"></p>
+    <p class="s" id="c5"></p>
+    <p class="s" id="d5"></p>
+    <input class="al1" id="cautraloi6" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi7"></p>
+    <p class="s" id="a6"></p>
+    <p class="s" id="b6"></p>
+    <p class="s" id="c6"></p>
+    <p class="s" id="d6"></p>
+    <input class="al1" id="cautraloi7" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi8"></p>
+    <p class="s" id="a7"></p>
+    <p class="s" id="b7"></p>
+    <p class="s" id="c7"></p>
+    <p class="s" id="d7"></p>
+    <input class="al1" id="cautraloi8" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi9"></p>
+    <p class="s" id="a8"></p>
+    <p class="s" id="b8"></p>
+    <p class="s" id="c8"></p>
+    <p class="s" id="d8"></p>
+    <input class="al1" id="cautraloi9" placeholder="Câu trả lời">
+
+    <p class="p" id="cauhoi10"></p>
+    <p class="s" id="a9"></p>
+    <p class="s" id="b9"></p>
+    <p class="s" id="c9"></p>
+    <p class="s" id="d9"></p>
+    <input class="al1" id="cautraloi10" placeholder="Câu trả lời"><br><br>
     
+    <button class="aq" onclick="check()" >Next</button>
 </body>
+<script>
+     class Cauhoigame {
+         constructor (cauhoi,tla,tlb,tlc,tld) {
+             this.cauhoi = cauhoi;
+             this.tla = tla;
+             this.tlb = tlb;
+             this.tlc = tlc;
+             this.tld = tld;
+         }
+         getCauhoi() {
+             return("Câu hỏi "+ this.cauhoi)
+         }
+         getTraloia() {
+             return ("A. "+this.tla);
+         }
+         getTraloib() {
+             return("B. "+this.tlb);
+         }
+         getTraloic() {
+             return("C. "+this.tlc);
+         }
+         getTraloid() {
+             return("D. "+ this.tld);
+         }
+     };
+     let demo = new Cauhoigame('1: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi1').innerText = demo.getCauhoi();
+     document.getElementById('a').innerText = demo.getTraloia();
+     document.getElementById('b').innerText = demo.getTraloib();
+     document.getElementById('c').innerText = demo.getTraloic();
+     document.getElementById('d').innerText = demo.getTraloid();
+     let demo1 = new Cauhoigame('2: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi2').innerText = demo1.getCauhoi();
+     document.getElementById('a1').innerText = demo1.getTraloia();
+     document.getElementById('b1').innerText = demo1.getTraloib();
+     document.getElementById('c1').innerText = demo1.getTraloic();
+     document.getElementById('d1').innerText = demo1.getTraloid();
+     let demo2 = new Cauhoigame('3: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi3').innerText = demo1.getCauhoi();
+     document.getElementById('a2').innerText = demo2.getTraloia();
+     document.getElementById('b2').innerText = demo2.getTraloib();
+     document.getElementById('c2').innerText = demo2.getTraloic();
+     document.getElementById('d2').innerText = demo2.getTraloid();
+     let demo3 = new Cauhoigame('4: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi4').innerText = demo3.getCauhoi();
+     document.getElementById('a3').innerText = demo3.getTraloia();
+     document.getElementById('b3').innerText = demo3.getTraloib();
+     document.getElementById('c3').innerText = demo3.getTraloic();
+     document.getElementById('d3').innerText = demo3.getTraloid();
+     let demo4 = new Cauhoigame('5: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi5').innerText = demo4.getCauhoi();
+     document.getElementById('a4').innerText = demo4.getTraloia();
+     document.getElementById('b4').innerText = demo4.getTraloib();
+     document.getElementById('c4').innerText = demo4.getTraloic();
+     document.getElementById('d4').innerText = demo4.getTraloid();
+     let demo5 = new Cauhoigame('6: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi6').innerText = demo5.getCauhoi();
+     document.getElementById('a5').innerText = demo5.getTraloia();
+     document.getElementById('b5').innerText = demo5.getTraloib();
+     document.getElementById('c5').innerText = demo5.getTraloic();
+     document.getElementById('d5').innerText = demo5.getTraloid();
+     let demo6 = new Cauhoigame('7: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi7').innerText = demo6.getCauhoi();
+     document.getElementById('a6').innerText = demo6.getTraloia();
+     document.getElementById('b6').innerText = demo6.getTraloib();
+     document.getElementById('c6').innerText = demo6.getTraloic();
+     document.getElementById('d6').innerText = demo6.getTraloid();
+     let demo7 = new Cauhoigame('8: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi8').innerText = demo7.getCauhoi();
+     document.getElementById('a7').innerText = demo7.getTraloia();
+     document.getElementById('b7').innerText = demo7.getTraloib();
+     document.getElementById('c7').innerText = demo7.getTraloic();
+     document.getElementById('d7').innerText = demo7.getTraloid();
+     let demo8 = new Cauhoigame('9: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi9').innerText = demo8.getCauhoi();
+     document.getElementById('a8').innerText = demo8.getTraloia();
+     document.getElementById('b8').innerText = demo8.getTraloib();
+     document.getElementById('c8').innerText = demo8.getTraloic();
+     document.getElementById('d8').innerText = demo8.getTraloid();
+     let demo9 = new Cauhoigame('10: đây là gì?','yes','no','khong','co');
+     document.getElementById('cauhoi10').innerText = demo9.getCauhoi();
+     document.getElementById('a9').innerText = demo9.getTraloia();
+     document.getElementById('b9').innerText = demo9.getTraloib();
+     document.getElementById('c9').innerText = demo9.getTraloic();
+     document.getElementById('d9').innerText = demo9.getTraloid();
+
+     function check() {
+     let cautraloi1 = document.getElementById('cautraloi1').value;
+     let cautraloi2 = document.getElementById('cautraloi2').value;
+     let cautraloi3 = document.getElementById('cautraloi3').value;
+     let cautraloi4 = document.getElementById('cautraloi4').value;
+     let cautraloi5 = document.getElementById('cautraloi5').value;
+     let cautraloi6 = document.getElementById('cautraloi6').value;
+     let cautraloi7 = document.getElementById('cautraloi7').value;
+     let cautraloi8 = document.getElementById('cautraloi8').value;
+     let cautraloi9 = document.getElementById('cautraloi9').value;
+     let cautraloi10 = document.getElementById('cautraloi10').value;
+     let score = 0;
+    if(cautraloi1 =='A') {
+        score +=1;        
+    }if(cautraloi2=='B'){
+        score +=1;
+    }if(cautraloi3=='B'){
+        score +=1;
+    }if(cautraloi4=='B'){
+        score +=1;
+    }if(cautraloi5=='B'){
+        score +=1;
+    }if(cautraloi6=='B'){
+        score +=1;
+    }if(cautraloi7=='B'){
+        score +=1;
+    }if(cautraloi8=='B'){
+        score +=1;
+    }if(cautraloi9=='B'){
+        score +=1;
+    }if(cautraloi10=='B'){
+        score +=1;
+    };  
+    
+    if(score<=3) {
+        alert ('Bạn nhận được tặng 1 vòng đeo cổ Pet iu <3');        
+    }else if(score<=6) {
+        alert ('Bạn nhận được 1 lồng thú cưng');
+    }else if (score <=9) {
+        alert ('Bạn nhận được 1 phiếu giảm giá 5% ');
+    }else {
+        alert ('Bạn nhận được 1 phiếu giảm giá 10%');
+    }
+     };
+     
+</script>
 </html>
