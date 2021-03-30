@@ -60,25 +60,11 @@ for (let index = 0; index < ao.length; index++) {
                 </tr>`               
         str += str2           
 }
-if(arr1 <=6) {
-    str+= `<tr>
+str+= `<tr>
                     <td >  </td>
                     <td></td><br>
                     <td> ${ak}<td>
                 </tr>`
-}else if(arr1<=9) {
-    str+= `<tr>
-                    <td >  </td>
-                    <td></td><br>
-                    <td> ${ak*5/100}<td>
-                </tr>`
-}else if (arr1==10) {
-    str+= `<tr>
-                    <td >  </td>
-                    <td></td><br>
-                    <td> ${ak*10/100}<td>
-                </tr>`
-}
 
 
 document.getElementById('list').innerHTML = str;
