@@ -15,49 +15,57 @@
     <table id="mapet">
         <tr>
             <th scope="col">Mã Pet</th>
-            <th scope="col">Giá</th>
-            <th scope="col">Khuyến mãi</th>
-            <th scope="col">Tổng</th>
+            <th scope="col">Giá</th>            
+            <th scope="col">Thành tiền</th>
             
         </tr>
         <tbody id="list">
         <tr>
-            <td>Day C02 bai "Ham 2"</td>
+            <td id="ma1"></td>
+            <td ></td>
+            <td></td>
+            <td id="ma3"></td>
         </tr>
         <tr>
-            <td>Day C02 bai "Ham 2"</td>
+            <td id="ma2">dd</td>
         </tr>
         </tbody>
     </table>
 </body>
 <script>
-    myStorage = window.localStorage;   
-    let cap1 = JSON.parse(localStorage.getItem("aicap01"));
-        let a = cap1.id ;
-        document.write(cap1.price +'<br>')
-    let cap2 = JSON.parse(localStorage.getItem("aicap02"));
-        document.write(cap2.id );
-        document.write(cap2.price +"<br>")
-    // let cap3 = JSON.parse(localStorage.getItem("aicap03"));
-    //     document.write(cap3.id );
-    //     document.write(cap3.price +'<br>')
-    // let cap4 = JSON.parse(localStorage.getItem("aicap04"));
-    //     document.write(cap4.id );
-    //     document.write(cap4.price +'<br>')
-    // console.log(a.id);
-    // localStorage.setItem('cat', 'JSON.stringify(aicap01)');
-    let list = [];
-function showAll(){
-    let content="";
-    for (let i = 0; i < list.length; i++) {      
-        content += "<tr><th>"+list[i]+"</th></tr>";
-    }
-    document.getElementById("list").innerHTML = content;
-}list.push(a)
-function them() {
-    list.push(a)
-return list;
+     myStorage = window.localStorage;
+    let ao = JSON.parse(localStorage.getItem('listItem'));
+   console.log(ao)       
+   let arr1 =  parseInt(localStorage.getItem('arr12')); 
+   console.log(arr1)   
+   if(arr1 == 0) {
+       document.write ("");
+   }else if(arr1 <=3) {
+    document.write( "Bạn được tặng 1 vòng đeo cổ Pet iu <3")
+   }else if(arr1 <=6) {
+    document.write(  'Bạn được tặng 1 lồng thú cưng');
+   }else if(arr1<=9) {
+    document.write( 'Bạn nhận được 1 phiếu giảm giá 5% ');
+   }else{
+    document.write('Bạn nhận được 1 phiếu giảm giá 10%');
+   }
+let str ="";
+let ak =0;
+for (let index = 0; index < ao.length; index++) {
+    
+    ak += ao[index].price;
+    let str2 = `<tr>
+                    <td id="ma1">  ${ao[index].id}</td>
+                    <td> ${ao[index].price }</td><br>
+                    <td> ${ak}<td>
+                </tr>`               
+        str += str2    
+        
 }
-document.write(list)
+
+document.getElementById('list').innerHTML = str;
+
+
+
 </script>
 </html>

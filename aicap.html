@@ -107,11 +107,11 @@
             <p id="sch14"><br></p> 
             <p id="sch15"><br></p>
            </div></div>
-    <div class="w1"><button onclick="them()" id = "1" >Thêm vào giỏ</button></div></br>
+    <div class="w1"><button onclick="thema()" type="button" id = "1" >Thêm vào giỏ1</button></div></br>
     </div>  
     
     <div>
-    <img class="ai2" src="aicap2.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao1" >
+    <img class="ai2" src="aicap2.jpg " alt=""  style="width: 350px;height: 400px;"><div class="ao1" >
         <div class="da"><br>
             <p id="sch20" ><br></p>
             <p id="sch2"><br></p>
@@ -121,7 +121,7 @@
             <p id="sch24"><br></p> 
             <p id="sch25"><br></p>
            </div></div>
-    <div class="w2"><button onclick="them()" id = "2" >Thêm vào giỏ</button></div></br>
+    <div class="w2"><button onclick="themb()" type="button" id = "2" >Thêm vào giỏ</button></div></br>
     </div>
    <div>
     <img class="ai3" src="aicap3.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao2" >
@@ -134,7 +134,7 @@
             <p id="sch34"><br></p> 
             <p id="sch35"><br></p>
            </div></div>
-    <div class="w3"><button onclick="them()" id = "3" >Thêm vào giỏ</button></div></br>
+    <div class="w3"><button onclick="themc()" type="button" id = "3" >Thêm vào giỏ</button></div></br>
 </div>
 <div>
     <img class="ai4" src="aicap4.jpg " alt="" style="width: 350px;height: 400px;"><div class="ao3" >
@@ -147,7 +147,7 @@
             <p id="sch44"><br></p> 
             <p id="sch45"><br></p>
            </div></div>
-    <div class="w4"><button onclick="them()" id = "4" >Thêm vào giỏ</button></div></br>
+    <div class="w4"><button onclick="themd()" type="button" id = "4" >Thêm vào giỏ</button></div></br>
 </div>
     <div class="giohang">
         <a href="giohang.html"><img src="giohang.png" alt=" " width="150px"></a>
@@ -191,8 +191,11 @@
     }
     
     };
-    
-    let aicap01= new Meo('AC001',5,'cái',3.8,'lp','5.300.000vnđ'," f");
+    let f1 = 5300000;
+    let f2 = 6000000;
+    let f3 = 5000000;
+    let f4 = 5800000;
+    let aicap01= new Meo('AC001',5,'cái',3.8,'lp',f1," f");
     document.getElementById('sch10').innerText = aicap01.iid();
     document.getElementById('sch1').innerText = aicap01.aage();
     document.getElementById('sch11').innerText = aicap01.ggender();
@@ -201,7 +204,7 @@
     document.getElementById('sch14').innerText = aicap01.ggeneric();
     document.getElementById('sch15').innerText = aicap01.ddescription();
     
-    let aicap02= new Meo('AC002',7,'đực',3,'lp','6.000.000vnđ'," f");
+    let aicap02= new Meo('AC002',7,'đực',3,'lp',f2," f");
     document.getElementById('sch20').innerText = aicap02.iid();
     document.getElementById('sch2').innerText = aicap02.aage();
     document.getElementById('sch21').innerText = aicap02.ggender();
@@ -210,7 +213,7 @@
     document.getElementById('sch24').innerText = aicap02.ggeneric();
     document.getElementById('sch25').innerText = aicap02.ddescription();
 
-    let aicap03= new Meo('AC003',6.5,'cái',4,'lp','7.000.000vnđ'," f");
+    let aicap03= new Meo('AC003',6.5,'cái',4,'lp',f3," f");
     document.getElementById('sch30').innerText = aicap03.iid();
     document.getElementById('sch3').innerText = aicap03.aage();
     document.getElementById('sch31').innerText = aicap03.ggender();
@@ -220,7 +223,7 @@
     document.getElementById('sch35').innerText = aicap03.ddescription();
     
 
-    let aicap04= new Meo('AC004',11,'đực',4.5,'lp','5.500.000vnđ'," f");
+    let aicap04= new Meo('AC004',11,'đực',4.5,'lp',f4," f");
     document.getElementById('sch40').innerText = aicap04.iid();
     document.getElementById('sch4').innerText = aicap04.aage();
     document.getElementById('sch41').innerText = aicap04.ggender();
@@ -228,15 +231,28 @@
     document.getElementById('sch43').innerText = aicap04.pprice();
     document.getElementById('sch44').innerText = aicap04.ggeneric();
     document.getElementById('sch45').innerText = aicap04.ddescription();
+    
+let listItem =[];
 
-    function them() {
-        ;
-    }
-    myStorage = window.localStorage;
-localStorage.setItem('aicap01', JSON.stringify(aicap01));
-localStorage.setItem('aicap02', JSON.stringify(aicap02));
-localStorage.setItem('aicap03', JSON.stringify(aicap03));
-localStorage.setItem('aicap04', JSON.stringify(aicap04));
+function thema() {
+    listItem.push(aicap01);
+   localStorage.setItem('listItem', JSON.stringify(listItem));  
+}
+
+function themb() {
+    listItem.push(aicap02);
+   localStorage.setItem('listItem', JSON.stringify(listItem));    
+}
+
+function themc() {
+    listItem.push(aicap03);
+   localStorage.setItem('listItem', JSON.stringify(listItem));  
+}
+
+function themd() {
+    listItem.push(aicap04);
+   localStorage.setItem('listItem', JSON.stringify(listItem));  
+}
 
 
         </script>

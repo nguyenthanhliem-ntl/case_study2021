@@ -103,6 +103,8 @@
     <button class="aq" onclick="check()" >Next</button>
 </body>
 <script>
+      let arr = [];
+      var score ;
      class Cauhoigame {
          constructor (cauhoi,tla,tlb,tlc,tld) {
              this.cauhoi = cauhoi;
@@ -127,61 +129,61 @@
              return("D. "+ this.tld);
          }
      };
-     let demo = new Cauhoigame('1: đây là gì?','yes','no','khong','co');
+     let demo = new Cauhoigame('1: Thị lực của mèo vào ban đêm như thế nào?','Tốt','Không tốt','Không thể nhìn thấy','Như mắt người');
      document.getElementById('cauhoi1').innerText = demo.getCauhoi();
      document.getElementById('a').innerText = demo.getTraloia();
      document.getElementById('b').innerText = demo.getTraloib();
      document.getElementById('c').innerText = demo.getTraloic();
      document.getElementById('d').innerText = demo.getTraloid();
-     let demo1 = new Cauhoigame('2: đây là gì?','yes','no','khong','co');
+     let demo1 = new Cauhoigame('2: Mèo là loại động vật ăn gì?','Ăn tạp','Ăn thịt','Ăn cỏ','Cả 3 phương án trên');
      document.getElementById('cauhoi2').innerText = demo1.getCauhoi();
      document.getElementById('a1').innerText = demo1.getTraloia();
      document.getElementById('b1').innerText = demo1.getTraloib();
      document.getElementById('c1').innerText = demo1.getTraloic();
      document.getElementById('d1').innerText = demo1.getTraloid();
-     let demo2 = new Cauhoigame('3: đây là gì?','yes','no','khong','co');
-     document.getElementById('cauhoi3').innerText = demo1.getCauhoi();
+     let demo2 = new Cauhoigame('3: Mèo Scottish bắt nguồn từ đâu ?','Anh','Ai cập','Ba tư','Scotland');
+     document.getElementById('cauhoi3').innerText = demo2.getCauhoi();
      document.getElementById('a2').innerText = demo2.getTraloia();
      document.getElementById('b2').innerText = demo2.getTraloib();
      document.getElementById('c2').innerText = demo2.getTraloic();
      document.getElementById('d2').innerText = demo2.getTraloid();
-     let demo3 = new Cauhoigame('4: đây là gì?','yes','no','khong','co');
+     let demo3 = new Cauhoigame('4: Cỏ mèo là gì?','Tên 1 loại ma túy cho mèo','1 loại lúa mạch cho mèo','1 loại thuốc độc','1 loại đồ uống');
      document.getElementById('cauhoi4').innerText = demo3.getCauhoi();
      document.getElementById('a3').innerText = demo3.getTraloia();
      document.getElementById('b3').innerText = demo3.getTraloib();
      document.getElementById('c3').innerText = demo3.getTraloic();
      document.getElementById('d3').innerText = demo3.getTraloid();
-     let demo4 = new Cauhoigame('5: đây là gì?','yes','no','khong','co');
+     let demo4 = new Cauhoigame('5: mèo nhà sống gần gũi với con người từ khi nào?','8000 năm TCN','3500 năm TCN','9500 năm trước','5000 năm trước');
      document.getElementById('cauhoi5').innerText = demo4.getCauhoi();
      document.getElementById('a4').innerText = demo4.getTraloia();
      document.getElementById('b4').innerText = demo4.getTraloib();
      document.getElementById('c4').innerText = demo4.getTraloic();
      document.getElementById('d4').innerText = demo4.getTraloid();
-     let demo5 = new Cauhoigame('6: đây là gì?','yes','no','khong','co');
+     let demo5 = new Cauhoigame('6: Động vât nào thuộc họ nhà mèo?','Báo','Hổ','Sư tử','Cả 3');
      document.getElementById('cauhoi6').innerText = demo5.getCauhoi();
      document.getElementById('a5').innerText = demo5.getTraloia();
      document.getElementById('b5').innerText = demo5.getTraloib();
      document.getElementById('c5').innerText = demo5.getTraloic();
      document.getElementById('d5').innerText = demo5.getTraloid();
-     let demo6 = new Cauhoigame('7: đây là gì?','yes','no','khong','co');
+     let demo6 = new Cauhoigame('7: Tại sao mèo lại thở khò khè?','Do tự nhiên','Do bệnh đường thở','Do bị sặc','Do con người');
      document.getElementById('cauhoi7').innerText = demo6.getCauhoi();
      document.getElementById('a6').innerText = demo6.getTraloia();
      document.getElementById('b6').innerText = demo6.getTraloib();
      document.getElementById('c6').innerText = demo6.getTraloic();
      document.getElementById('d6').innerText = demo6.getTraloid();
-     let demo7 = new Cauhoigame('8: đây là gì?','yes','no','khong','co');
+     let demo7 = new Cauhoigame('8: Đa số mèo tam thể là?','Mèo đực','Mèo cái','% đực cái bằng nhau','Tùy theo tự nhiên');
      document.getElementById('cauhoi8').innerText = demo7.getCauhoi();
      document.getElementById('a7').innerText = demo7.getTraloia();
      document.getElementById('b7').innerText = demo7.getTraloib();
      document.getElementById('c7').innerText = demo7.getTraloic();
      document.getElementById('d7').innerText = demo7.getTraloid();
-     let demo8 = new Cauhoigame('9: đây là gì?','yes','no','khong','co');
+     let demo8 = new Cauhoigame('9: Tại sao mèo lại thsch ăn cá?','Vì cá có taurine','Vì cá có mùi tanh','Vì nó thích','vì nó đói');
      document.getElementById('cauhoi9').innerText = demo8.getCauhoi();
      document.getElementById('a8').innerText = demo8.getTraloia();
      document.getElementById('b8').innerText = demo8.getTraloib();
      document.getElementById('c8').innerText = demo8.getTraloic();
      document.getElementById('d8').innerText = demo8.getTraloid();
-     let demo9 = new Cauhoigame('10: đây là gì?','yes','no','khong','co');
+     let demo9 = new Cauhoigame('10: Khi mất râu mèo có bắt chuột được không?','Vẫn bắt được','Tùy hứng của nó','Hên xui','Không thể bắt được');
      document.getElementById('cauhoi10').innerText = demo9.getCauhoi();
      document.getElementById('a9').innerText = demo9.getTraloia();
      document.getElementById('b9').innerText = demo9.getTraloib();
@@ -199,39 +201,60 @@
      let cautraloi8 = document.getElementById('cautraloi8').value;
      let cautraloi9 = document.getElementById('cautraloi9').value;
      let cautraloi10 = document.getElementById('cautraloi10').value;
-     let score = 0;
+     score = 0;
+     
     if(cautraloi1 =='A') {
         score +=1;        
     }if(cautraloi2=='B'){
         score +=1;
-    }if(cautraloi3=='B'){
+    }if(cautraloi3=='D'){
         score +=1;
     }if(cautraloi4=='B'){
         score +=1;
-    }if(cautraloi5=='B'){
+    }if(cautraloi5=='C'){
         score +=1;
-    }if(cautraloi6=='B'){
+    }if(cautraloi6=='D'){
         score +=1;
-    }if(cautraloi7=='B'){
+    }if(cautraloi7=='C'){
         score +=1;
     }if(cautraloi8=='B'){
         score +=1;
-    }if(cautraloi9=='B'){
+    }if(cautraloi9=='A'){
         score +=1;
-    }if(cautraloi10=='B'){
+    }if(cautraloi10=='D'){
         score +=1;
     };  
     
-    if(score<=3) {
-        alert ('Bạn nhận được tặng 1 vòng đeo cổ Pet iu <3');        
+    let z1 = 'Chúc bạn may mắn lần sau!';
+    let z2 = 'Bạn nhận được tặng 1 vòng đeo cổ Pet iu <3';
+    let z3 = 'Bạn nhận được 1 lồng thú cưng';
+    let z4 = 'Bạn nhận được 1 phiếu giảm giá 5% ';
+    let z5 = 'Bạn nhận được 1 phiếu giảm giá 10%';
+   
+    // alert(arr)
+   
+    if(score==0){
+        alert(z1)        
+    }else if(score<=3) {
+        alert (z2);        
     }else if(score<=6) {
-        alert ('Bạn nhận được 1 lồng thú cưng');
+        alert (z3);
     }else if (score <=9) {
-        alert ('Bạn nhận được 1 phiếu giảm giá 5% ');
+        alert (z4);
     }else {
-        alert ('Bạn nhận được 1 phiếu giảm giá 10%');
-    }
-     };
+        alert (z5);
+    }   
+    arr.push(score);
+    localStorage.setItem('arr12', score);
+     };     
+   
+  
+   
+    // localStorage.setItem('arr12', JSON.stringify(arr));
+    
+    
+
+
      
 </script>
 </html>
