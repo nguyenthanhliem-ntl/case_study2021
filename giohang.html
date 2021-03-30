@@ -38,17 +38,7 @@
    console.log(ao)       
    let arr1 =  parseInt(localStorage.getItem('arr12')); 
    console.log(arr1)   
-   if(arr1 == 0) {
-       document.write ("");
-   }else if(arr1 <=3) {
-    document.write( "Bạn được tặng 1 vòng đeo cổ Pet iu <3")
-   }else if(arr1 <=6) {
-    document.write(  'Bạn được tặng 1 lồng thú cưng');
-   }else if(arr1<=9) {
-    document.write( 'Bạn nhận được 1 phiếu giảm giá 5% ');
-   }else{
-    document.write('Bạn nhận được 1 phiếu giảm giá 10%');
-   };
+   
 let str ="";
 let ak =0;
 for (let index = 0; index < ao.length; index++) {    
@@ -68,6 +58,17 @@ str+= `<tr>
 
 
 document.getElementById('list').innerHTML = str;
+if(arr1 == 0) {
+       document.write ("");
+   }else if(arr1 <=3) {
+    document.write( "Bạn được tặng 1 vòng đeo cổ Pet iu <3")
+   }else if(arr1 <=6) {
+    document.write(  'Bạn được tặng 1 lồng thú cưng');
+   }else if(arr1<=9) {
+    document.write( 'Bạn nhận được 1 phiếu giảm giá 5% ');
+   }else{
+    document.write('Bạn nhận được 1 phiếu giảm giá 10%');
+   };
 
 
 
