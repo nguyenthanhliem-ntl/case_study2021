@@ -27,7 +27,7 @@
             <td id="ma3"></td>
         </tr>
         <tr>
-            <td id="ma2">dd</td>
+            <td id="ma2"></td>
         </tr>
         </tbody>
     </table>
@@ -51,17 +51,35 @@
    }
 let str ="";
 let ak =0;
-for (let index = 0; index < ao.length; index++) {
-    
+for (let index = 0; index < ao.length; index++) {    
     ak += ao[index].price;
     let str2 = `<tr>
                     <td id="ma1">  ${ao[index].id}</td>
                     <td> ${ao[index].price }</td><br>
-                    <td> ${ak}<td>
+                   <td></td>
                 </tr>`               
-        str += str2    
-        
+        str += str2           
 }
+if(arr1 <=6) {
+    str+= `<tr>
+                    <td >  </td>
+                    <td></td><br>
+                    <td> ${ak}<td>
+                </tr>`
+}else if(arr1<=9) {
+    str+= `<tr>
+                    <td >  </td>
+                    <td></td><br>
+                    <td> ${ak*5/100}<td>
+                </tr>`
+}else if (arr1==10) {
+    str+= `<tr>
+                    <td >  </td>
+                    <td></td><br>
+                    <td> ${ak*10/100}<td>
+                </tr>`
+}
+
 
 document.getElementById('list').innerHTML = str;
 
